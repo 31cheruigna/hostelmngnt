@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <title>Enter Email</title>
+
+        <link rel="stylesheet" type="text/css" href="style.css" href="contact1.css">
+
+        <style>
+            body {
+            background-image: url(./images/turkwel.jpg);
+            background-size: cover;
+
+            }
+
+            h1 {
+                color: #000000;
+            }
+
+            #findfriends {
+                width: 800px;
+            }
+
+            #inputfriends {
+                margin: 20px;
+            }
+
+            #registerhere {
+                font-size: 20px;
+                float: right;
+                margin: 20px;
+                color: #000000;
+            }
+
+            #check {
+                width: 150px;
+            }
+        </style>
+
+    </head>
+
+    <body>
+
+        <div class="navbar">
+            <a href="index.html" id="back" style="color:white">&larr;Back</a>
+        </div>
+
+        <!--dropdown friends-->
+        <div class="container" id="findfriends">
+            <div id="registerhere">
+                Haven't registered yet?<br />
+                <a href="index.html" style="color:blue">Register Here &#x27A0;</a>
+            </div>
+            <h3> Enter email ID </h3>
+            <form method="POST" action="submit.html">
+                <input type="text" name="email" id="inputfriends" placeholder="Enter email ID" list="friends" required/><br />
+                <datalist id="friends">
+                    <?php
+                        $domain = 'localhost:3306';
+                        $username = '';
+                        $password = '';
+                        $conn = mysqli_connect($domain, $username, $password, '');
+                        if (!$conn) {
+                            echo ('Connection failed: ' .  mysqli_connect_error());
+                        }
+
+
+                        /*if ($query = mysqli_prepare($conn, "select email from people;")) {
+                            mysqli_stmt_bind_param($query, "s", $_POST['email']);
+                            mysqli_stmt_execute($query);
+                            mysqli_stmt_bind_result($query, $friends);
+                            mysqli_stmt_close($query);
+                        }*/
+
+                        $res = mysqli_query($conn, 'select email from people;');
+
+                        while ($email = mysqli_fetch_assoc($res)) {
+                            echo "<option>" . $email['email'] . "</option>";
+                        }
+
+                        mysqli_close($conn);
+                    ?>
+                </datalist>
+                <input type="submit" id="check" value="Check" /><br />
+            </form>
+
+        </div>
+        <footer>
+            <div id="contacts"  style="text-align: center;">
+              <img src="./images/LOGO.JPG" height="50px" width="50px">
+              <h3 style="text-align: center;">Contact Us</h3>
+                 <p><img src="./images/facebook.jpeg" style="height: 30px;"> Facebook:  SEKUHOSTELS<br><br></p>
+                 <p><img src="./images/twiter.jpeg"style="height: 30px;"> Twiter:  @SEKUHOSTELS<br><br></p>
+                 <p> <img src="./images/instagram.jpeg"style="height: 30px;"> instagram: SEKUHOSTELS</p>
+          </div>
+            <p style="text-align: center;" id="copy1">Copyright ©2021 SEKUHOSTELS, Inc. All rights reserved.Privacy & Legal Policies</p>
+          </footer>
+
+
+    </body>
+
+</html>

@@ -1,0 +1,70 @@
+*{
+    font-size: 12px;
+    font-family: 'Times New Roman';
+
+}
+td,
+th,
+tr,
+table{
+    border-top: 1px #915911;
+}
+td.PRICE,
+th.PRICE{
+    width: 300px;
+    max-width: 300px;
+}
+td.STATUS,
+th.STATUS{
+    width: 300px ;
+    max-width: 300px;
+    word-break: break-all;
+
+}
+.centered{
+    text-align: center;
+    align-content: center;
+}
+.ticket{
+    width: 300px;
+    max-width: 300px;
+}
+img {
+    max-width: inherit;
+    width: inherit;
+}
+.container {
+    width: 80%;
+    margin: 10%;
+    padding: 0px 25px 25px;
+    width: 80%;
+    background: #915911;
+    box-shadow:
+        0px 0px 0px 5px rgba( 255,255,255,0.4 ),
+        0px 4px 20px #915911;
+    border-radius: 5px;
+    display: table;
+}
+
+#contacts {
+    background-color: #915911;
+    padding: 30px;
+    border-radius: 200px;
+    color: white;
+    align-items: center;
+  }
+  #contacts>img{
+    float: left;
+    border: white;
+    margin-top: 30px;
+    margin-left: 30px;
+  }
+  #contacts>p{
+    display: inline-flex;
+    justify-content: space-evenly;
+    margin: 10px;
+  }
+  #copy1{
+      background-color: #186d0d;
+      font-size: 30px;
+  }

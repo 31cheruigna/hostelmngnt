@@ -1,0 +1,127 @@
+.container6{
+      background-color: #186d0d;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      overflow: auto;
+
+}
+
+header{
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+}
+nav>ol{
+  list-style: none;
+}
+nav>ol>li{
+      display: inline-flex;
+      padding: 5px;
+      margin: 5px;
+}
+nav>ol>li>a{
+    text-decoration: none;
+    color: rgb(161, 138, 4);
+    padding: 7px;
+}
+nav>ol>li>a:hover {
+        background-color:rgb(161, 138, 4);
+        color: #186d0d;
+        border-radius: 10px;
+}
+
+.book{
+  background-color: rgb(161, 138, 4);
+  color:white;
+  border-radius: 10px;
+  margin-left: 10px;
+  padding: 7px;
+}
+
+.book:hover {
+  background-color: black;
+}
+
+
+.logo {
+    border: solid black;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.rig{
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+    margin-bottom: 25px;
+    
+}
+.rig>form>button {
+        font-size: large;
+        color: #186d0d;
+        background-color: rgb(161, 138, 4);
+        border-radius: 20px;
+        margin-top: 20px;
+        cursor: pointer;
+}
+
+.rig>form>button :hover {
+            opacity: 0.5;
+}
+
+ input[type=text] {
+    margin: 10px;
+}
+
+.cover6{
+  background-image: url(./images/turkwel.jpg);
+  background-size: cover;
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: x-large;
+  color: rgb(161, 138, 4);
+  cursor: pointer;
+  font-family: 'Fontdiner Swanky', cursive;
+  text-decoration: underline;
+}
+
+.box-body{
+    display: flex;
+    justify-content: space-around;
+    
+}
+.box-body > span{
+    color: rgb(161, 138, 4);
+    border: rgb(161, 138, 4) solid 1px;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 50px;
+    background-color:#186d0d;
+
+}
+
+#contacts {
+  background-color: rgb(161, 138, 4);
+  padding: 20px;
+  border-radius: 200px;
+  color: white;
+  align-items: center;
+}
+#contacts>img{
+  float: left;
+  border: white;
+  margin-top: 20px;
+  margin-left: 25px;
+}
+#contacts>p{
+  display: inline-flex;
+  justify-content: space-evenly;
+  margin: 10px;
+}
+#copy1{
+    background-color: #186d0d;
+    font-size: smaller;
+}
